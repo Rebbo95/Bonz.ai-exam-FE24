@@ -214,6 +214,8 @@
     text-align: center;
 }
 
+
+
 .header__menu-link:hover {
     background-color: #555; 
     color: #ffcc00;
@@ -231,4 +233,107 @@ footer p{
     color: #ffcc00;
     margin-top: 4rem;
     text-align:end;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 1rem; /* Add padding for spacing */
+    text-align: center;
+    color: #ffffff; 
+    background-color: #333; /* Maintain a consistent background */
+}
+
+/* Hero Section */
+.about__hero {
+    margin-bottom: 2rem; /* Add space below the hero */
+}
+
+.about__hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #54e9bc;
+    margin-bottom: 1rem;
+}
+
+.about__hero p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #cccccc; /* Subtle secondary text */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Content Section */
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem; /* Space below this section */
+}
+
+.about__text {
+    text-align: left; /* Align text to the left */
+}
+
+.about__text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #54e9bc;
+}
+
+.about__text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.about__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about__team {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #333;
+    color: #ffffff;
+}
+
+.about__team h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #54e9bc;
+}
+
+.about__team-card {
+    display: inline-block; /* Aligns cards horizontally if space allows */
+    margin: 1rem;
+    text-align: center;
+    width: 200px; 
+    background-color: #444;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about__team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.about__team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #54e9bc;
+}
+
+.about__team-card p {
+    font-size: 1rem;
+    color: #cccccc;
 }
