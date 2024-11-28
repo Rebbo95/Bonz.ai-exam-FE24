@@ -10,31 +10,22 @@
 <body>
     
     <header class="header">
-        <a href="index.html" class="header__logo">
-        <img src="../Images/logo/bonz.ai-logo-white-portrait-full.png" alt="Hotell Logo">
-        <nav class="header__nav">
-            <ul class="header__menu">
-                <li class="header__menu-item">
-                    <a href="index.html" class="header__menu-link">Hem</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="about.html" class="header__menu-link">Om oss</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="booking.html" class="header__menu-link">Boka rum</a>
-                </li>
-            </ul>
-        </nav>
-        
-        </a>
+        <div class="header__logo">
+            <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo">
+        </div>
+        <ul class="header__menu">
+            <li><a href="#" class="header__menu-link">Hem</a></li>
+            <li><a href="#" class="header__menu-link">Om oss</a></li>
+            <li><a href="#" class="header__menu-link">Boka rum</a></li>
+        </ul>
     </header>
     <main>
         
         <section class="hero">
             <div class="hero__image"></div> <!-- Background image container -->
             <div class="hero__content">
-                <h1 class="hero__title">Välkommen till vårt hotell!</h1>
-                <p class="hero__text">Kika in några snygga hotell nedan!</p>
+                <img src="/Images/logo/bonz.ai-logo-color-portrait-full.png" alt="Hero Logo" class="hero__logo">
+             
             </div>
     
             <section class="carousel">
@@ -43,20 +34,23 @@
             <input type="radio" name="carousel" id="card3" class="carousel__radio">
     
             <div class="carousel__wrapper">
+                <!-- Card 1 -->
                 <article class="carousel__item" aria-labelledby="card1-label">
-                    <img src="../Images/photos/01-night.jpg" alt="Image 2">
-                    <h2 id="card1-label">Room 1</h2>
-                    <p>Experience luxury and comfort at Hotel 1.</p>
+                    <img src="../Images/photos/01-night.jpg" alt="Room 1">
+                    <h2 id="card1-label">Example Room 1</h2>
+                    <p>Experience luxury and comfort at Room 1.</p>
                 </article>
-    
+            
+                <!-- Card 2 -->
                 <article class="carousel__item" aria-labelledby="card2-label">
-                    <img src="../Images/photos/01-night.jpg" alt="Image 2">
-                    <h2 id="card2-label">Hotel 2</h2>
-                    <p>Relax in style at Hotel 2 with modern amenities.</p>
+                    <img src="../Images/photos/04-day.jpg" alt="Room 2">
+                    <h2 id="card2-label">Example Room 2</h2>
+                    <p>Relax in style at Room 2 with proven comfort, by extensive research using AI.</p>
                 </article>
-    
+            
+                <!-- Card 3 -->
                 <article class="carousel__item" aria-labelledby="card3-label">
-                    <img src="image3.jpg" alt="Image 3">
+                    <img src="../Images/photos/01-night.jpg" alt="Room 3">
                     <h2 id="card3-label">Hotel 3</h2>
                     <p>Enjoy a memorable stay at Hotel 3 near the city center.</p>
                 </article>
