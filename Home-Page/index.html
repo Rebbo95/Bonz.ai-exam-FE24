@@ -1,10 +1,77 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Välkommen till vårt hotell!">
+    <title>Hotell Landningssida</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
     
+    <header class="header">
+        <a href="index.html" class="header__logo">
+        <img src="../Images/logo/bonz.ai-logo-white-portrait-full.png" alt="Hotell Logo">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="index.html" class="header__menu-link">Hem</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="about.html" class="header__menu-link">Om oss</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="booking.html" class="header__menu-link">Boka rum</a>
+                </li>
+            </ul>
+        </nav>
+        
+        </a>
+    </header>
+    <main>
+        
+        <section class="hero">
+            <div class="hero__image"></div> <!-- Background image container -->
+            <div class="hero__content">
+                <h1 class="hero__title">Välkommen till vårt hotell!</h1>
+                <p class="hero__text">Kika in några snygga hotell nedan!</p>
+            </div>
+    
+            <section class="carousel">
+            <input type="radio" name="carousel" id="card1" class="carousel__radio" checked>
+            <input type="radio" name="carousel" id="card2" class="carousel__radio">
+            <input type="radio" name="carousel" id="card3" class="carousel__radio">
+    
+            <div class="carousel__wrapper">
+                <article class="carousel__item" aria-labelledby="card1-label">
+                    <img src="../Images/photos/01-night.jpg" alt="Image 2">
+                    <h2 id="card1-label">Room 1</h2>
+                    <p>Experience luxury and comfort at Hotel 1.</p>
+                </article>
+    
+                <article class="carousel__item" aria-labelledby="card2-label">
+                    <img src="../Images/photos/01-night.jpg" alt="Image 2">
+                    <h2 id="card2-label">Hotel 2</h2>
+                    <p>Relax in style at Hotel 2 with modern amenities.</p>
+                </article>
+    
+                <article class="carousel__item" aria-labelledby="card3-label">
+                    <img src="image3.jpg" alt="Image 3">
+                    <h2 id="card3-label">Hotel 3</h2>
+                    <p>Enjoy a memorable stay at Hotel 3 near the city center.</p>
+                </article>
+            </div>
+    
+            <label for="card3" class="carousel__prev">&#8592;</label>
+            <label for="card2" class="carousel__next">&#8594;</label>
+            <label for="card1" class="carousel__prev">&#8592;</label>
+            <label for="card3" class="carousel__next">&#8594;</label>
+            <label for="card2" class="carousel__prev">&#8592;</label>
+            <label for="card1" class="carousel__next">&#8594;</label>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Hotell. Alla rättigheter förbehållna.</p>
+    </footer>
 </body>
 </html>

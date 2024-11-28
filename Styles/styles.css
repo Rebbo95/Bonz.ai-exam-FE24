@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent content from overflowing */
+    color: white; /* Text color */
+}
+
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/photos/01-day.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Places the image behind text content */
+    filter: blur(5px); /*blurs the hero image (background)*/
+}
+
+
+.hero__title {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 700
+    
+}
+
+.hero__text {
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium';
+    
+    font-size: 1rem;
+    font-weight: 300
+       
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 42vw;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.carousel__wrapper {
+    display: flex;
+
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); 
+}
+
+
+.carousel__item {
+    gap: 2rem;
+    flex: 0 0 20%; /* Each item takes full width */
+    height: 300px; /* Make it square */
+    text-align: center;
+    padding: 2px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    
+}
+
+.carousel p{
+
+ font-size: 1rem;
+ font-weight: lighter;
+
+}
+
+/* Arrows */
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+.carousel__prev {
+    left: 10px;
+}
+
+.carousel__next {
+    right: 10px;
+}
+
+/* Radio Buttons (Hidden) */
+.carousel__radio {
+    display: none;
+}
+
+/* Card Visibility Control */
+.carousel__radio#card1:checked ~ .carousel__wrapper {
+    transform: translateX(0); /* First card */
+}
+
+.carousel__radio#card2:checked ~ .carousel__wrapper {
+    transform: translateX(-100%); /* Second card */
+}
+
+.carousel__radio#card3:checked ~ .carousel__wrapper {
+    transform: translateX(-200%); /* Third card */
+}
+
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas: 
+        "logo"
+        "menu";
+    grid-template-columns: 1fr; /* Single column layout */
+    background-color: #333;
+    color: white;
+    position: sticky;
+    padding:0rem;
+}
+
+
+/* Logo */
+.header__logo {
+    grid-area: logo; /* Assign to the 'logo' grid area */
+    display: flex; /* Use flex for alignment */
+    justify-content: center; /* Center logo horizontally */
+    z-index: 2; /* Ensure logo is on top */
+    position: relative; /* Enable overlap control */
+}
+
+.header__logo img {
+    height: 20vh;
+ /* Adjust size of the logo */
+    max-width: 100%; /* Keep logo responsive */
+}
+
+/* Menu */
+.header__menu {
+    grid-area: menu; /* Assign to the 'menu' grid area */
+    display: flex; /* Use flex for the menu */
+    list-style: none; /* Remove default list styles */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Add spacing between items */
+    margin: 0;
+    padding: 1rem;
+    background-color: #333; /* Menu background */
+    z-index: 1; /* Ensure it is below the logo */
+    position: relative; /* Allow stacking */
+}
+
+/* Menu links */
+.header__menu-link {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font */
+    padding: 10px 15px; /* Make links clickable */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    text-align: center; /* Center text */
+}
+
+.header__menu-link:hover {
+    background-color: #555; /* Background on hover */
+    color: #ffcc00;
+
+
+}
+footer{
+    background-color: #333;
+    padding: 1rem;
+    justify-items: center;
+
+}
+
+footer p{
+    color: #ffcc00;
+    margin-top: 4rem;
+    text-align:end;
+}
