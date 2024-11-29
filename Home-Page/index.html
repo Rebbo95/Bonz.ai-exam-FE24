@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,65 +8,69 @@
     <title>Hotell Landningssida</title>
     <link rel="stylesheet" href="../Styles/styles.css">
 </head>
+
 <body>
-    
+
+    <!--Header section-->
+
     <header class="header">
         <div class="header__logo">
             <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo">
         </div>
         <ul class="header__menu">
-            <li><a href="/Home-Page/index.html" class="header__menu-link">Hem</a></li> 
-            <li><a href="/About-page/index.html" class="header__menu-link">Om oss</a></li>
-            <li><a href="#" class="header__menu-link">Boka rum</a></li>
+            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a>
+            <li><a href="/About-page/index.html" class="header__menu-link">About</a>
+            <li><a href="#" class="header__menu-link">Rent a Room</a>
         </ul>
     </header>
     <main>
-        
+
         <section class="hero">
             <div class="hero__image"></div> <!-- Background image container -->
             <div class="hero__content">
                 <img src="/Images/logo/bonz.ai-logo-color-portrait-full.png" alt="Hero Logo" class="hero__logo">
 
             </div>
-    
+
             <section class="carousel">
-            <input type="radio" name="carousel" id="card1" class="carousel__radio" checked>
-            <input type="radio" name="carousel" id="card2" class="carousel__radio">
-            <input type="radio" name="carousel" id="card3" class="carousel__radio">
-    
-            <div class="carousel__wrapper">
-                <!-- Card 1 -->
-                <article class="carousel__item" aria-labelledby="card1-label">
-                    <img src="../Images/photos/01-night.jpg" alt="Room 1">
-                    <h2 id="card1-label">Example Room 1</h2>
-                    <p>Experience luxury and comfort at Room 1.</p>
-                </article>
-            
-                <!-- Card 2 -->
-                <article class="carousel__item" aria-labelledby="card2-label">
-                    <img src="../Images/photos/04-day.jpg" alt="Room 2">
-                    <h2 id="card2-label">Example Room 2</h2>
-                    <p>Relax in style at Room 2 with proven comfort, by extensive research using AI.</p>
-                </article>
-            
-                <!-- Card 3 -->
-                <article class="carousel__item" aria-labelledby="card3-label">
-                    <img src="../Images/photos/01-night.jpg" alt="Room 3">
-                    <h2 id="card3-label">Hotel 3</h2>
-                    <p>Enjoy a memorable stay at Hotel 3 near the city center.</p>
-                </article>
-            </div>
-    
-            <label for="card3" class="carousel__prev">&#8592;</label>
-            <label for="card2" class="carousel__next">&#8594;</label>
-            <label for="card1" class="carousel__prev">&#8592;</label>
-            <label for="card3" class="carousel__next">&#8594;</label>
-            <label for="card2" class="carousel__prev">&#8592;</label>
-            <label for="card1" class="carousel__next">&#8594;</label>
-        </section>
+                <input type="radio" name="carousel" id="card1" class="carousel__radio" checked>
+                <input type="radio" name="carousel" id="card2" class="carousel__radio">
+                <input type="radio" name="carousel" id="card3" class="carousel__radio">
+
+                <div class="carousel__wrapper">
+                    <!-- Card 1 -->
+                    <article class="carousel__item" aria-labelledby="card1-label">
+                        <img src="../Images/photos/01-night.jpg" alt="Room 1">
+                        <h2 id="card1-label">Example Room 1</h2>
+                        <p>Experience luxury and comfort at Room 1.</p>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="carousel__item" aria-labelledby="card2-label">
+                        <img src="../Images/photos/04-day.jpg" alt="Room 2">
+                        <h2 id="card2-label">Example Room 2</h2>
+                        <p>Relax in style at Room 2 with proven comfort, by extensive research using AI.</p>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="carousel__item" aria-labelledby="card3-label">
+                        <img src="../Images/photos/01-night.jpg" alt="Room 3">
+                        <h2 id="card3-label">Hotel 3</h2>
+                        <p>Enjoy a memorable stay at Hotel 3 near the city center.</p>
+                    </article>
+                </div>
+
+                <label for="card3" class="carousel__prev">&#8592;</label>
+                <label for="card2" class="carousel__next">&#8594;</label>
+                <label for="card1" class="carousel__prev">&#8592;</label>
+                <label for="card3" class="carousel__next">&#8594;</label>
+                <label for="card2" class="carousel__prev">&#8592;</label>
+                <label for="card1" class="carousel__next">&#8594;</label>
+            </section>
     </main>
     <footer>
         <p>© 2024 Hotell. Alla rättigheter förbehållna.</p>
     </footer>
 </body>
+
 </html>
