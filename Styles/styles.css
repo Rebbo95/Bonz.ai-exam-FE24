@@ -52,7 +52,7 @@ body {
 
 .header__logo img {
     height: 4vh;
-    max-width: 120px; /* Adjusted max-width to prevent overscaling */
+    max-width: 100px; /*adjusted to 100px to ensure everything is centered*/
 }
 
 /* Header Menu */
@@ -317,8 +317,10 @@ footer p {
 
 /* Carousel Styling */
 .carousel {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     position: relative;
-    max-width: 42vw;
+    max-width: 50vw;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
