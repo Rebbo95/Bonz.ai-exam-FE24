@@ -5,71 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Välkommen till vårt hotell!">
-    <title>Hotell Landningssida</title>
+    <title>Welcome to Bonz.ai Hotels</title>
     <link rel="stylesheet" href="../Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <!--Header section-->
-
     <header class="header">
         <div class="header__logo">
             <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo">
         </div>
         <ul class="header__menu">
-            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a>
-            <li><a href="/About-page/index.html" class="header__menu-link">About</a>
-            <li><a href="#" class="header__menu-link">Rent a Room</a>
+            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a></li>
+            <li><a href="/About-page/index.html" class="header__menu-link">About</a></li>
+            <li><a href="#" class="header__menu-link">Rent a Room</a></li>
         </ul>
     </header>
-    <main>
 
-        <section class="hero">
-            <div class="hero__image"></div> <!-- Background image container -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__image">
             <div class="hero__content">
-                <img src="/Images/logo/bonz.ai-logo-color-portrait-full.png" alt="Hero Logo" class="hero__logo">
-
-            </div>
-
-            <section class="carousel">
-                <input type="radio" name="carousel" id="card1" class="carousel__radio" checked>
-                <input type="radio" name="carousel" id="card2" class="carousel__radio">
-                <input type="radio" name="carousel" id="card3" class="carousel__radio">
-
-                <div class="carousel__wrapper">
-                    <!-- Card 1 -->
-                    <article class="carousel__item" aria-labelledby="card1-label">
-                        <img src="../Images/photos/01-night.jpg" alt="Room 1">
-                        <h2 id="card1-label">Example Room 1</h2>
-                        <p>Experience luxury and comfort at Room 1.</p>
-                    </article>
-
-                    <!-- Card 2 -->
-                    <article class="carousel__item" aria-labelledby="card2-label">
-                        <img src="../Images/photos/04-day.jpg" alt="Room 2">
-                        <h2 id="card2-label">Example Room 2</h2>
-                        <p>Relax in style at Room 2 with proven comfort, by extensive research using AI.</p>
-                    </article>
-
-                    <!-- Card 3 -->
-                    <article class="carousel__item" aria-labelledby="card3-label">
-                        <img src="../Images/photos/01-night.jpg" alt="Room 3">
-                        <h2 id="card3-label">Hotel 3</h2>
-                        <p>Enjoy a memorable stay at Hotel 3 near the city center.</p>
-                    </article>
+                <h1>Welcome to Bonz.ai Hotels</h1>
+                <p>Your perfect getaway awaits. Experience luxury and comfort like never before.</p>
+                <div class="hero__actions">
+                    <a href="/Booking-page/index.html" class="btn btn--primary">Book Now</a>
+                    <a href="/About-page/index.html" class="btn btn--secondary">Learn More</a>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <label for="card3" class="carousel__prev">&#8592;</label>
-                <label for="card2" class="carousel__next">&#8594;</label>
-                <label for="card1" class="carousel__prev">&#8592;</label>
-                <label for="card3" class="carousel__next">&#8594;</label>
-                <label for="card2" class="carousel__prev">&#8592;</label>
-                <label for="card1" class="carousel__next">&#8594;</label>
-            </section>
+    <!-- Main Content -->
+    <main>
+        <section class="carousel">
+            <!-- Radio Buttons -->
+            <input type="radio" name="carousel" id="card1" class="carousel__radio" checked>
+            <input type="radio" name="carousel" id="card2" class="carousel__radio">
+            <input type="radio" name="carousel" id="card3" class="carousel__radio">
+        
+            <!-- Wrapper -->
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <img src="../Images/photos/01-day.jpg" alt="Room 1">
+                    <h2>Room 1</h2>
+                    <p>Details about Room 1</p>
+                </div>
+                <div class="carousel__item">
+                    <img src="../Images/photos/01-night.jpg" alt="Room 2">
+                    <h2>Room 2</h2>
+                    <p>Details about Room 2</p>
+                </div>
+                <div class="carousel__item">
+                    <img src="../Images/photos/02-night.jpg" alt="Room 3">
+                    <h2>Room 3</h2>
+                    <p>Details about Room 3</p>
+                </div>
+            </div>
+        
+            <!-- Navigation Arrows -->
+            <label for="card1" class="carousel__prev">&#8592;</label>
+            <label for="card2" class="carousel__next">&#8594;</label>
+            <label for="card2" class="carousel__prev">&#8592;</label>
+            <label for="card3" class="carousel__next">&#8594;</label>
+            <label for="card3" class="carousel__prev">&#8592;</label>
+            <label for="card1" class="carousel__next">&#8594;</label>
+        </section>
+        
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Hotell. Alla rättigheter förbehållna.</p>
+        <div class="footer-links">
+            <a href="/Home-Page/index.html">Home</a>
+            <a href="/About-page/index.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+        
+    <!--Font-Awesome Icons, link is within the <head> tag -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </footer>
 </body>
 

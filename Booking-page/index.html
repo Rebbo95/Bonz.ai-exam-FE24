@@ -1,10 +1,126 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Välkommen till vårt hotell!">
+    <title>Hotell Landningssida</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header__logo">
+            <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo">
+        </div>
+        <ul class="header__menu">
+            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a></li>
+            <li><a href="/About-page/index.html" class="header__menu-link">About</a></li>
+            <li><a href="../Booking-page/index.html" class="header__menu-link">Rent a Room</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="booking">
+            <!-- Booking Content Container -->
+            <div class="booking__content">
+                <!-- Hero Section -->
+                <div class="booking__image"></div>
+
+                <!-- Booking Search Section -->
+                <div class="booking__search">
+                    <h2>Search for a Room</h2>
+                    <form class="booking__form">
+                        <label for="check-in">Check-in Date:</label>
+                        <input type="date" id="check-in" name="check-in">
+
+                        <label for="check-out">Check-out Date:</label>
+                        <input type="date" id="check-out" name="check-out">
+
+                        <label for="room-type">Room Type:</label>
+                        <select id="room-type" name="room-type">
+                            <option value="none">Select Room Type</option>
+                            <option value="single">Single Room</option>
+                            <option value="double">Double Room</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="room-listings" class="room-listings" style="display: none;">
+
+            <h2>Available Rooms</h2>
+
+            <!-- Single Room -->
+            <article class="room-card single card">
+                <img src="../Images/rooms/single-room.jpg" alt="Single Room">
+                <h3>Single Room</h3>
+                <p>1 Bed, Garden View</p>
+                <p>Price: $100/night</p>
+                <button class="btn">Book Now</button>
+            </article>
+
+            <!-- Double Room -->
+            <article class="room-card double card">
+                <img src="../Images/rooms/double-room.jpg" alt="Double Room">
+                <h3>Double Room</h3>
+                <p>2 Beds, Ocean View</p>
+                <p>Price: $150/night</p>
+                <button class="btn">Book Now</button>
+            </article>
+
+            <!-- Suite Room -->
+            <article class="card">
+                <img src="../Images/photos/01-day.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Luxury Suite, City View</p>
+                <p>Price: $300/night</p>
+                <button class="btn">Book Now</button>
+            </article>
+            <article class="card">
+                <img src="../Images/photos/01-day.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Luxury Suite, City View</p>
+                <p>Price: $300/night</p>
+                <button class="btn">Book Now</button>
+            </article>
+            
+        </section>
+    </main>
+
+    <!-- Link to External JS -->
+    <!-- Shows rooms based on option selected-->
+    <!--Currently has some bugs-->
+    <script src="roomFilter.js"></script>
 </body>
+
+<footer>
+    <div class="footer-links">
+        <a href="/Home-Page/index.html">Home</a>
+        <a href="/About-page/index.html">About</a>
+        <a href="#">Contact</a>
+    </div>
+    
+<!--Font-Awesome Icons, link is within the <head> tag -->
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
 </html>

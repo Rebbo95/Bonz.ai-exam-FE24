@@ -1,141 +1,366 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #54e9bc;
+    --secondary-color: #cccccc;
+    --dark-bg: #333;
+    --light-bg: #444;
+    --highlight-color: #ffcc00;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2rem;
+    --border-radius: 8px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --background-light: #f0f0f0; 
+}
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--light-bg); /* Applied variable */
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas: "logo menu";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: var(--dark-bg);
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 9999;
+}
+
+/* Logo */
+.header__logo {
+    grid-area: logo;
+    display: inline-block;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 4vh;
+    max-width: 120px; /* Adjusted max-width to prevent overscaling */
+}
+
+/* Header Menu */
+.header__menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header__menu-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header__menu-link:hover {
+    background-color: var(--light-bg);
+    color: var(--highlight-color);
 }
 
 /* Hero Section */
 .hero {
     position: relative;
+    width: 100%;
     height: 100vh;
+    margin-top: 20px; /* Space between header and hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Hero Image */
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Images/photos/Hotel_View.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn--primary {
+    background: #007BFF;
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background: #0056b3;
+}
+
+.btn--secondary {
+    background: #fff;
+    color: #007BFF;
+}
+
+.btn--secondary:hover {
+    background: #f1f1f1;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Section Styling */
+.section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.section__title {
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 2px;
+}
+
+.card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    margin: 1rem;
+}
+
+.card p {
+    font-size: var(--font-size-base);
+    margin: 0 1rem 1rem;
+    line-height: 1.5;
+}
+
+.card .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--secondary-color);
+    font-size: var(--font-size-base);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--light-bg);
+}
+
+/* Footer Links */
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--highlight-color);
+}
+
+/* Footer Social Icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--highlight-color);
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Booking Section */
+.booking {
+    padding: 2rem;
+    background-color: var(--background-light);
+}
+
+/* Booking Content */
+.booking__content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Booking Image */
+.booking__image {
+    flex: 1 1 50%;
+    background-image: url('../Images/photos/booking-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Booking Search */
+.booking__search {
+    flex: 1 1 50%;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Form Styling */
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking__form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.booking__form input,
+.booking__form select,
+.booking__form button {
+    padding: 0.8rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.booking__form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking__form button:hover {
+    background-color: #0056b3;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    max-width: 42vw;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel__wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel__item {
+    flex: 0 0 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    overflow: hidden; /* Prevent content from overflowing */
-    color: #54e9bc;
-}
-
-/*hero background image(main background*/
-.hero__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../Images/photos/Hotel_View.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* Places the image behind text content */
-    filter: blur(5px); /* Blurs the hero image (background) */
-}
-
-/* container for hero content, logo ect*/
-.hero__content {
-    position: relative; /* Allow precise positioning within the hero section */
-    z-index: 1; /* Ensure it sits above the background image */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; /* Add spacing between the logo, title, and text */
-}
-
-/* Hero Logo */ 
-.hero__logo {
-    width: 150px; /* Adjust the width of the hero logo */
-    max-width: 100%;
-    margin-bottom: 10px; /* Add spacing below the logo */
-    position: static;
-    border-radius: 10px;
-    
-}
-
-
-/* Hero Text, not sure what to do with this at the moment.
-
-.hero__text {
-    font-size: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    margin: 2rem;
-    
-    color: rgb(238, 7, 7);
-    z-index: 99999;
-    border-radius: 20px;
-  
-    box-shadow: 1rem 20px 20px rgba(6, 255, 35, 0.2);
-
-
-    
-}
-*/
-/*Room card styling*/
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 42vw; /* Limit the carousel width */
-    overflow: hidden; /* Hide other cards outside the view */
-}
-
-.carousel__wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition between cards */
-    transform: translateX(0); /* Default position for the first card */
- 
-}
-
-.carousel__item {
-    flex: 0 0 100%; /* Each card takes full width of the carousel */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-start; /* Align content to the top */
-    align-items: center; /* Center-align items horizontally */
-    text-align: center; /* Center-align text */
-
-    background-color: #333; /* Card background color */
-  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    background-color: #333;
+    color: #fff;
+    box-shadow: var(--shadow);
 }
 
 .carousel__item img {
-    width: 100%; /* Make image fill the card width */
-    height: auto; /* Adjust image height dynamically */
-    object-fit: cover; /* Maintain aspect ratio and cover space */
-   
-    margin-bottom: 1rem; /* Space between image and text */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.carousel__item h2 {
-    font-size: 1.5rem; 
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 0.5rem; /* Space below the title */
-}
-
-.carousel__item p {
-    font-size: 1rem; /* Adjust description font size */
-    font-weight: normal;
-    color: #cccccc; 
-    margin-bottom: 1rem; /* Space below the description */
-    line-height: 1.5; 
-}
-
-/* Arrows */
+/* Navigation Arrows */
 .carousel__prev,
 .carousel__next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
-    color: #333;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
     z-index: 10;
-    user-select: none;
 }
 
 .carousel__prev {
@@ -143,7 +368,7 @@
 }
 
 .carousel__next {
-    right: 15px;
+    right: 20px;
 }
 
 /* Hide radio buttons */
@@ -151,189 +376,16 @@
     display: none;
 }
 
-/* Card Visibility Control */
+/* Radio Buttons and Card Transitions */
 .carousel__radio#card1:checked ~ .carousel__wrapper {
-    transform: translateX(0); /* Show first card */
+    transform: translateX(0%);
 }
 
 .carousel__radio#card2:checked ~ .carousel__wrapper {
-    transform: translateX(-100%); /* Show second card */
+    transform: translateX(-100%);
 }
 
 .carousel__radio#card3:checked ~ .carousel__wrapper {
-    transform: translateX(-200%); /* Show third card */
+    transform: translateX(-200%);
 }
 
-/* Header */
-.header {
-    display: grid;
-    grid-template-areas: 
-        "logo menu"; /* Define two areas: logo and menu */
-    grid-template-columns: auto 1fr; /* Logo takes auto width, menu takes remaining space */
-    align-items: center; /* Center items vertically */
-    background-color: #333;
-    color: white;
-    position: sticky;
-    top: 0; /* Stick to the top */
-    padding: 0 1rem; /* Add horizontal padding */
-    height: 5vh; 
-}
-
-/* Logo */
-.header__logo {
-    grid-area: logo; /* Place in the 'logo' grid area */
-    display: flex; /* Optional: Flexbox for logo alignment */
-    align-items: center;
-}
-
-.header__logo img {
-    height: 4vh; /* Adjust size of the logo */
-    max-width: 120vh; /* Keep logo responsive */
-}
-
-/* Menu */
-.header__menu {
-    grid-area: menu; /* Place in the 'menu' grid area */
-    display: flex; 
-    justify-content: center; /* Center the menu horizontally */
-    gap: 5rem; /* Add spacing between menu items */
-    list-style: none; /* Remove default list styling */
-    margin: 0;
-    padding: 0;
-}
-
-/* Menu links */
-.header__menu-link {
-    color:#54e9bc;
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold font */
-    font-size: large;
-    padding: 10px 15px; /* Add clickable area */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-    text-align: center;
-}
-
-
-
-.header__menu-link:hover {
-    background-color: #555; 
-    color: #ffcc00;
-}
-
-
-footer{
-    background-color: #333;
-    padding: 1rem;
-    justify-items: center;
-
-}
-
-footer p{
-    color: #ffcc00;
-    margin-top: 4rem;
-    text-align:end;
-}
-
-/* About Section */
-.about {
-    padding: 3rem 1rem; /* Add padding for spacing */
-    text-align: center;
-    color: #ffffff; 
-    background-color: #333; /* Maintain a consistent background */
-}
-
-/* Hero Section */
-.about__hero {
-    margin-bottom: 2rem; /* Add space below the hero */
-}
-
-.about__hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #54e9bc;
-    margin-bottom: 1rem;
-}
-
-.about__hero p {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: #cccccc; /* Subtle secondary text */
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Content Section */
-.about__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two-column layout */
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 4rem; /* Space below this section */
-}
-
-.about__text {
-    text-align: left; /* Align text to the left */
-}
-
-.about__text h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #54e9bc;
-}
-
-.about__text p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #cccccc;
-}
-
-.about__image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.about__team {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #333;
-    color: #ffffff;
-}
-
-.about__team h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #54e9bc;
-}
-
-.about__team-card {
-    display: inline-block; /* Aligns cards horizontally if space allows */
-    margin: 1rem;
-    text-align: center;
-    width: 200px; 
-    background-color: #444;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.about__team-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-.about__team-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #54e9bc;
-}
-
-.about__team-card p {
-    font-size: 1rem;
-    color: #cccccc;
-}

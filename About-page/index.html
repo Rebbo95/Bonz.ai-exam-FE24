@@ -7,85 +7,107 @@
     <meta name="description" content="Välkommen till vårt hotell!">
     <title>Hotell Landningssida</title>
     <link rel="stylesheet" href="../Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!--Header section-->
     <header class="header">
         <div class="header__logo">
-            <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo">
+            <img src="/Images/logo/bonz.ai-logo-color-landscape.png" alt="BAonz.ai Logo">
         </div>
         <ul class="header__menu">
-            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a>
-            <li><a href="/About-page/index.html" class="header__menu-link">About</a>
-            <li><a href="#" class="header__menu-link">Rent a Room</a>
+            <li><a href="/Home-Page/index.html" class="header__menu-link">Home</a></li>
+            <li><a href="/About-page/index.html" class="header__menu-link">About</a></li>
+            <li><a href="#" class="header__menu-link">Rent a Room</a></li>
         </ul>
     </header>
 
     <main>
 
-        <!--About section-->
-        <section class="about">
-
-            <!-- Hero Section -->
-            <header class="about__hero">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__image"></div>
+            <div class="hero__content">
                 <h1>About us</h1>
                 <p>Welcome to the future of hospitality at Eko Living Hotel, where modern luxury meets cutting-edge
                     artificial intelligence. Imagine a place where every detail is designed to elevate your stay,
                     blending sustainability, comfort, and personalized service like never before.</p>
-            </header>
+            </div>
+        </section>
 
-            <!-- Main Content -->
-            <section class="about__content">
-                <section class="about__text">
-                    <h2>About our Hotel</h2>
-                    <p>
-                        Our hotel is powered by an advanced AI system, expertly trained by our team to anticipate your
-                        needs, curate unforgettable experiences, and ensure seamless service throughout your stay. From
-                        intuitive room settings that adjust to your preferences to bespoke dining recommendations and
-                        eco-conscious practices, every moment here is tailored to perfection.
+        <!-- About Content Section -->
+        <section class="section">
+            <h2>About our Hotel</h2>
+            <p>
+                Our hotel is powered by an advanced AI system, expertly trained by our team to anticipate your
+                needs, curate unforgettable experiences, and ensure seamless service throughout your stay. From
+                intuitive room settings that adjust to your preferences to bespoke dining recommendations and
+                eco-conscious practices, every moment here is tailored to perfection.
 
-                        At Eko Living Hotel, innovation meets responsibility. Our AI-driven systems optimize energy use,
-                        reduce waste, and ensure an eco-friendly footprint without compromising on the luxuries you
-                        deserve. With smart room automation, voice-assisted concierge services, and 24/7 on-demand
-                        assistance, we redefine convenience while embracing sustainability.
+                At Eko Living Hotel, innovation meets responsibility. Our AI-driven systems optimize energy use,
+                reduce waste, and ensure an eco-friendly footprint without compromising on the luxuries you
+                deserve. With smart room automation, voice-assisted concierge services, and 24/7 on-demand
+                assistance, we redefine convenience while embracing sustainability.
 
-                        Whether you’re here for business or leisure, Eko Living Hotel is more than a destination—it’s an
-                        experience. Book your stay today and discover a modern sanctuary where technology meets
-                        tranquility.
-                    </p>
-                </section>
-                <figure class="about__image">
-                    <img src="../Images/photos/hotel-history.jpg" alt="something..">
-                </figure>
-            </section>
+                Whether you’re here for business or leisure, Eko Living Hotel is more than a destination—it’s an
+                experience. Book your stay today and discover a modern sanctuary where technology meets
+                tranquility.
+            </p>
+        </section>
 
-            <!-- Team Section -->
-            <section class="about__team">
-                <h2>Meet our artificial team</h2>
-                <article class="about__team-card">
+        <!-- About Image -->
+        <figure class="about__image">
+            <img src="../Images/photos/hotel-history.jpg" alt="Hotel History">
+        </figure>
+
+        <!-- Team Section -->
+        <section class="about__team text-center">
+            <h2>Meet our artificial team</h2>
+            <div class="team__cards flex-center">
+                <article class="card">
                     <img src="../Images/Staff/Staff-CEO.png" alt="Ellath-6, CEO">
                     <h3>Ellath-6</h3>
                     <p>CEO</p>
                 </article>
 
-                <article class="about__team-card">
+                <article class="card">
                     <img src="../Images/Staff/Staff-CMO.png" alt="Onnath-3, Chief Marketing Officer">
                     <h3>Onnath-3</h3>
                     <p>Chief Marketing Officer</p>
                 </article>
 
-                <article class="about__team-card">
+                <article class="card">
                     <img src="../Images/Staff/Staff-CAS.png" alt="Presence-4, Chief AI Scientist">
                     <h3>Presence-4</h3>
                     <p>Chief AI Scientist</p>
                 </article>
-            </section>
+            </div>
         </section>
+
     </main>
+
     <footer>
-        <p>© 2024 Hotell. Alla rättigheter förbehållna.</p>
+        <div class="footer-links">
+            <a href="/Home-Page/index.html">Home</a>
+            <a href="/About-page/index.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+        
+    <!--Font-Awesome Icons, link is within the <head> tag -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </footer>
+</body>
 
 </html>
