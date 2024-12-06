@@ -82,7 +82,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     margin-top: 20px; /* Space between header and hero */
     display: flex;
     justify-content: center;
@@ -102,6 +102,7 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 0;
+    filter: blur(10px);
 }
 
 /* Hero Content */
@@ -110,10 +111,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 20px;
+    padding: 5rem;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    color: white;
+    font-weight: bolder;
 }
 
 /* Button Styles */
@@ -122,25 +123,29 @@ body {
     font-size: 1rem;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+ 
 }
 
 .btn--primary {
-    background: #007BFF;
-    color: #fff;
+    background: #223523;
+    color: #ffffff;
 }
 
 .btn--primary:hover {
     background: #0056b3;
 }
 
-.btn--secondary {
-    background: #fff;
-    color: #007BFF;
+.btn.btn--secondary {
+    color: #ffffff; /* White text */
+    background-color: #0056b3; /* Darker blue background */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.btn--secondary:hover {
-    background: #f1f1f1;
+.btn.btn--secondary:hover {
+    background-color: #004085; /* Even darker blue on hover */
 }
 
 .btn-success {
@@ -155,12 +160,14 @@ body {
 /* Section Styling */
 .section {
     padding: 3rem 1rem;
+    color: var(--background-light);
     text-align: center;
+    
 }
 
 .section__title {
     font-size: var(--font-size-xl);
-    color: var(--primary-color);
+    color:var(--primary-color);
     margin-bottom: 2rem;
 }
 
