@@ -30,6 +30,7 @@ body {
 }
 
 /* Header */
+/* Base Header Styling */
 .header {
     display: grid;
     grid-template-areas: "logo menu";
@@ -51,24 +52,24 @@ body {
 }
 
 .header__logo img {
-    height: 4vh;
-    max-width: 100px; /*adjusted to 100px to ensure everything is centered*/
+    height: auto;
+    max-width: 80px; /* Adjusted size for better scaling */
 }
 
 /* Header Menu */
 .header__menu {
     grid-area: menu;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: center; /* Align menu to the right */
+    gap: 1rem; /* Smaller gaps for better fit */
     list-style: none;
 }
 
 .header__menu-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-size: var(--font-size-lg);
-    padding: 0.5rem 1rem;
+    font-size: var(--font-size-md);
+    padding: 0.5rem;
     border-radius: var(--border-radius);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -77,6 +78,9 @@ body {
     background-color: var(--light-bg);
     color: var(--highlight-color);
 }
+
+
+
 
 /* Hero Section */
 .hero {
@@ -159,7 +163,7 @@ body {
 
 /* Section Styling */
 .section {
-    padding: 3rem 1rem;
+    
     color: var(--background-light);
     text-align: center;
     
@@ -256,30 +260,7 @@ footer p {
     color: var(--secondary-color);
 }
 
-/* Booking Section */
-.booking {
-    padding: 2rem;
-    background-color: var(--background-light);
-}
 
-/* Booking Content */
-.booking__content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Booking Image */
-.booking__image {
-    flex: 1 1 50%;
-    background-image: url('../Images/photos/booking-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
 
 /* Booking Search */
 .booking__search {
@@ -398,3 +379,39 @@ footer p {
     transform: translateX(-200%);
 }
 
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        grid-template-areas:
+            "logo"
+            "menu";
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    .header__menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center align the menu */
+        gap: 1rem;
+        
+    }
+
+    .header__menu-link {
+        font-size: var(--font-size-sm); /* Slightly smaller font for mobile */
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo img {
+        max-width: 60px; /* Reduce logo size for smaller screens */
+    }
+
+    .header__menu-link {
+        font-size: var(--font-size-xs);
+        padding: 0.5rem;
+    }
+}

@@ -26,74 +26,89 @@
     </header>
 
     <main>
-        <section class="booking">
-            <!-- Booking Content Container -->
-            <div class="booking__content">
-                <!-- Hero Section -->
-                <div class="booking__image"></div>
-
-                <!-- Booking Search Section -->
-                <div class="booking__search">
-                    <h2>Search for a Room</h2>
-                    <form class="booking__form">
-                        <label for="check-in">Check-in Date:</label>
-                        <input type="date" id="check-in" name="check-in">
-
-                        <label for="check-out">Check-out Date:</label>
-                        <input type="date" id="check-out" name="check-out">
-
-                        <label for="room-type">Room Type:</label>
-                        <select id="room-type" name="room-type">
-                            <option value="none">Select Room Type</option>
-                            <option value="single">Single Room</option>
-                            <option value="double">Double Room</option>
-                            <option value="suite">Suite</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
-                </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__image"></div>
+            <div class="hero__content">
+                <h1>Book Your Stay at Bonz.Ai</h1>
+                <h2>The Only AI-Driven Eko Living Hotel</h2>
+                <p>
+                    Step into the future of hospitality at Eko Living Hotel, where luxury meets cutting-edge artificial intelligence. 
+                    Whether you're traveling for business, leisure, or a special occasion, we offer a range of accommodations designed to cater to your needs.
+                </p>
+                <p>
+                    Choose from our <strong>Single Rooms</strong> for solo travelers, <strong>Double Rooms</strong> for couples or families, or indulge in our 
+                    opulent <strong>Suites</strong> for an unforgettable experience. Each room features modern amenities, stylish decor, and stunning views tailored to your preferences.
+                </p>
+                <p>
+                    Booking is easy! Select your check-in and check-out dates, choose the room type that suits you, and let us take care of the rest. 
+                    Your comfort is our priority.
+                </p>
+                <p>
+                    <strong>Reserve your room today and experience hospitality redefined at Eko Living Hotel!</strong>
+                </p>
             </div>
         </section>
+    
+    
+        <!-- Booking Search Section -->
+           <section class="section">
+            <h2 class="section__title">Search for a Room:</h2>
+            <form class="booking__form">
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="check-in">
 
-        <section id="room-listings" class="room-listings" style="display: none;">
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="check-out">
 
-            <h2>Available Rooms</h2>
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type">
+                    <option value="none">Select Room Type</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
 
-            <!-- Single Room -->
-            <article class="room-card single card">
-                <img src="../Images/rooms/single-room.jpg" alt="Single Room">
-                <h3>Single Room</h3>
-                <p>1 Bed, Garden View</p>
-                <p>Price: $100/night</p>
-                <button class="btn">Book Now</button>
-            </article>
-
-            <!-- Double Room -->
-            <article class="room-card double card">
-                <img src="../Images/rooms/double-room.jpg" alt="Double Room">
-                <h3>Double Room</h3>
-                <p>2 Beds, Ocean View</p>
-                <p>Price: $150/night</p>
-                <button class="btn">Book Now</button>
-            </article>
-
-            <!-- Suite Room -->
-            <article class="card">
-                <img src="../Images/photos/01-day.jpg" alt="Suite Room">
-                <h3>Suite Room</h3>
-                <p>Luxury Suite, City View</p>
-                <p>Price: $300/night</p>
-                <button class="btn">Book Now</button>
-            </article>
-            <article class="card">
-                <img src="../Images/photos/01-day.jpg" alt="Suite Room">
-                <h3>Suite Room</h3>
-                <p>Luxury Suite, City View</p>
-                <p>Price: $300/night</p>
-                <button class="btn">Book Now</button>
-            </article>
-            
+           </section>
+        
         </section>
+
+        <section class="section">
+            <section id="room-listings" class="room-listings" style="display: none;">
+
+                <h2 class="section__title">Available Rooms</h2>
+
+                <!-- Single Room -->
+                <article class="room-card single card">
+                    <img src="../Images/rooms/single-room.jpg" alt="Single Room">
+                    <h3>Single Room</h3>
+                    <p>1 Bed, Garden View</p>
+                    <p>Price: $100/night</p>
+                    <button class="btn">Book Now</button>
+                </article>
+
+                <!-- Double Room -->
+                <article class="room-card double card">
+                    <img src="../Images/rooms/double-room.jpg" alt="Double Room">
+                    <h3>Double Room</h3>
+                    <p>2 Beds, Ocean View</p>
+                    <p>Price: $150/night</p>
+                    <button class="btn">Book Now</button>
+                </article>
+
+                <!-- Suite Room -->
+                <article class="room-card suite card">
+                    <img src="../Images/photos/01-day.jpg" alt="Suite Room">
+                    <h3>Suite Room</h3>
+                    <p>Luxury Suite, City View</p>
+                    <p>Price: $300/night</p>
+                    <button class="btn">Book Now</button>
+                </article>
+
+
+            </section>
     </main>
 
     <!-- Link to External JS -->
@@ -108,8 +123,8 @@
         <a href="/About-page/index.html">About</a>
         <a href="#">Contact</a>
     </div>
-    
-<!--Font-Awesome Icons, link is within the <head> tag -->
+
+    <!--Font-Awesome Icons, link is within the <head> tag -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>

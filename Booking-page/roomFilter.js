@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const allRoomCards = document.querySelectorAll(".room-card");
 
     // Function to handle room filtering
-    function filterRooms(selectedType) {
+    function filterRooms(selectedType){
         // Display the room listings section
         roomListingsSection.style.display = "block";
 
