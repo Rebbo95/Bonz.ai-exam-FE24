@@ -32,18 +32,22 @@
             <div class="hero__content">
                 <h1>Book Your Stay at Bonz.Ai</h1>
                 <h2>The Only AI-Driven Eko Living Hotel</h2>
-                    Booking is easy! Select your check-in and check-out dates, choose the room type that suits you, and let us take care of the rest. 
-                    Your comfort is our priority.
+                <p>
+                    Step into the future of hospitality at Eko Living Hotel, where luxury meets cutting-edge artificial
+                    intelligence.
+                    Whether you're traveling for business, leisure, or a special occasion, we offer a range of
+                    accommodations designed to cater to your needs.
                 </p>
                 <p>
-                    <strong>Reserve your room today and experience hospitality redefined at Eko Living Hotel!</strong>
+                    Booking is easy! Select your check-in and check-out dates, choose the room type that suits you, and
+                    let us take care of the rest.
+                    Your comfort is our priority.
                 </p>
             </div>
         </section>
-    
-    
+
         <!-- Booking Search Section -->
-           <section class="section">
+        <section class="section">
             <h2 class="section__title">Search for a Room:</h2>
             <form class="booking__form">
                 <label for="check-in">Check-in Date:</label>
@@ -59,74 +63,88 @@
                     <option value="double">Double Room</option>
                     <option value="suite">Suite</option>
                 </select>
-                <button type="submit" class="btn btn-primary">Search</button>
             </form>
-
-           </section>
-        
         </section>
 
-        <section class="section">
-            <section id="room-listings" class="room-listings" style="display: none;">
+        <!-- Room Listings Section -->
+        <section id="room-listings" class="room-listings" style="display: none;">
+            <h2 class="section__title">Available Rooms</h2>
 
-                <h2 class="section__title">Available Rooms</h2>
+            <!-- Single Room -->
+            <article class="room-card single card">
+                <img src="../Images/photos/01-day.jpg" alt="Single Room">
+                <h3>Single Room</h3>
+                <p>1 Bed, Garden View</p>
+                <p>Price: $100/night</p>
+                <button class="btn">Book Now</button>
+            </article>
 
-                <!-- Single Room -->
-                <article class="room-card single card">
-                    <img src="../Images/rooms/single-room.jpg" alt="Single Room">
-                    <h3>Single Room</h3>
-                    <p>1 Bed, Garden View</p>
-                    <p>Price: $100/night</p>
-                    <button class="btn">Book Now</button>
-                </article>
+            <article class="room-card single card">
+                <img src="../Images/photos/02-night.jpg" alt="Single Room">
+                <h3>Single Room</h3>
+                <p>1 Bed, Garden View</p>
+                <p>Price: $100/night</p>
+                <button class="btn">Book Now</button>
+            </article>
 
-                <!-- Double Room -->
-                <article class="room-card double card">
-                    <img src="../Images/rooms/double-room.jpg" alt="Double Room">
-                    <h3>Double Room</h3>
-                    <p>2 Beds, Ocean View</p>
-                    <p>Price: $150/night</p>
-                    <button class="btn">Book Now</button>
-                </article>
+            <!-- Double Room -->
+            <article class="room-card double card">
+                <img src="../Images/photos/04-night.jpg" alt="Double Room">
+                <h3>Double Room</h3>
+                <p>2 Beds, Ocean View</p>
+                <p>Price: $150/night</p>
+                <button class="btn">Book Now</button>
+            </article>
 
-                <!-- Suite Room -->
-                <article class="room-card suite card">
-                    <img src="../Images/photos/01-day.jpg" alt="Suite Room">
-                    <h3>Suite Room</h3>
-                    <p>Luxury Suite, City View</p>
-                    <p>Price: $300/night</p>
-                    <button class="btn">Book Now</button>
-                </article>
+            <article class="room-card double card">
+                <img src="../Images/photos/08-day.jpg" alt="Double Room">
+                <h3>Double Room</h3>
+                <p>2 Beds, Ocean View</p>
+                <p>Price: $150/night</p>
+                <button class="btn">Book Now</button>
+            </article>
 
+            <!-- Suite Room -->
+            <article class="room-card suite card">
+                <img src="../Images/photos/03-day.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Luxury Suite, City View</p>
+                <p>Price: $300/night</p>
+                <button class="btn">Book Now</button>
+            </article>
 
-            </section>
+            <article class="room-card suite card">
+                <img src="../Images/photos/09-day.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Luxury Suite, City View</p>
+                <p>Price: $300/night</p>
+                <button class="btn">Book Now</button>
+            </article>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="/Home-Page/index.html">Home</a>
+            <a href="/About-page/index.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
     <!-- Link to External JS -->
-    <!-- Shows rooms based on option selected-->
-    <!--Currently has some bugs-->
     <script src="roomFilter.js"></script>
 </body>
-
-<footer>
-    <div class="footer-links">
-        <a href="/Home-Page/index.html">Home</a>
-        <a href="/About-page/index.html">About</a>
-        <a href="#">Contact</a>
-    </div>
-
-    <!--Font-Awesome Icons, link is within the <head> tag -->
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-</footer>
 
 </html>
